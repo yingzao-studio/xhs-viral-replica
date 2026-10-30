@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书参考拆解与创作"
+  short_description: "借鉴参考结构，用自己的真实素材创作图文，先看成稿再看依据与待补项"
+  default_prompt: "使用 $xhs-viral-replica，拆解我提供的参考，再用我的真实素材创作1篇图文草稿，不虚构体验或数据，本次只做草稿。"
