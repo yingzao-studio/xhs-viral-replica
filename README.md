@@ -1,3 +1,15 @@
+<!-- PUBLIC-ACCESS:START -->
+## 所有人可获取：DeepSeek · 豆包 · ChatGPT
+
+**小红书参考拆解与创作**
+
+- [完整技能文本，复制后交给模型](https://raw.githubusercontent.com/yingzao-studio/xhs-viral-replica/main/%E9%80%9A%E7%94%A8%E6%8F%90%E7%A4%BA%E8%AF%8D.txt)
+- [ZIP下载](https://github.com/yingzao-studio/xhs-viral-replica/releases/download/public-20261031/xhs-viral-replica.zip)
+- [三平台使用步骤](三平台使用说明.md)
+
+公开下载不代表官方目录收录；模型能否读附件、联网或自动读取链接取决于实际环境。
+<!-- PUBLIC-ACCESS:END -->
+
 # 小红书参考拆解与创作 · v2.1.0
 
 拆解参考笔记的可见结构，用自己的真实材料创作1篇图文草稿。 不虚构经历和数据，不保证流量或成交。默认只制作草稿。
