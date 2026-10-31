@@ -1,8 +1,5 @@
-<<<SKILL-PACK-BEGIN xhs-viral-replica version=2.1.2>>>
-本文件为普通聊天模式的完整技能指令，不是MCP服务，也不代表已永久安装。
-文中的references等相对路径，对应本文件RESOURCE标记章节；按需使用已提供的正文，不要因无法访问本地路径而假装缺少这些内嵌资料。
-只有实际读到全部所需资料才执行对应阶段。链接抓取、附件解析或全文读取失败时如实报告，不能仅见标题/首尾标记就声称已经完整加载。
-本环境能力由当前宿主决定，不能把技能目录支持等同于普通聊天支持。输出先给用户可用成果，再附必要来源与缺口。
+<<<SKILL-PACK-BEGIN xhs-viral-replica version=2.1.3>>>
+这是普通聊天模式的完整技能指令，不是MCP接口，不代表已安装或永久生效。文中相对资源路径对应本文件RESOURCE章节，不需要普通聊天访问本地文件。按任务读取所需正文；资料缺失或截断就说明，不虚构已加载。联网、文件、图像、账号能力以实际工具为准。
 
 资源索引：
 - SKILL.md
@@ -18,7 +15,6 @@
 - references/voice.md
 - references/workbook-adaptation.md
 
-
 <<<RESOURCE SKILL.md>>>
 ---
 name: xhs-viral-replica
@@ -26,11 +22,11 @@ description: 拆解用户提供的小红书参考笔记，用真实素材创作1
 license: MIT
 metadata:
   author: "yingzao-studio"
-  version: "2.1.2"
+  version: "2.1.3"
   standards-reviewed: "2026-10-31"
 ---
 
-## 第一次使用（v2.1.2）
+## 第一次使用（v2.1.3）
 
 适合：已有参考笔记，想借鉴其结构并用自己资料写新稿的创作者、产品负责人和运营人员。
 最少输入：参考笔记的链接、截图或文本中的一种。只给参考即可拆解；要创作正式草稿，还需主题和至少一项自己的可核实素材。没有参考时可以原创，但明确“未完成参考拆解”。
@@ -122,7 +118,7 @@ metadata:
 
 只读取当前阶段需要的参考，不自动加载整套资料或通用提示词。通用提示词仅供不支持技能文件的宿主使用。用户只要求审查或修改技能时，不启动业务任务。
 
-## 豆包与DeepSeek接入
+## 豆包、DeepSeek与ChatGPT接入
 
 在豆包、DeepSeek普通聊天或DeepSeek Harness中首次使用时，按需读 [平台接入核验](references/platform-compatibility.md)。聊天单文件方式使用本文件内嵌的RESOURCE章节，不要求访问不存在的本地路径；原生目录方式保留本目录的相对资源。先按实际能力说明缺口，不声称未经验证的安装成功。
 
@@ -370,6 +366,14 @@ xhs-content-loop 负责素材、选题、制作、发布准备与复盘；xhs-vi
 没有联网则保留动态事实待核验；没有文件工具则在回复中提供成果和接力摘要；没有账号权限则只给草稿。不另装插件、不运行额外脚本、不发布内容来证明加载。
 结构和导出完整性已在本地校验，客户端操作与模型业务效果尚未实测。ChatGPT等其他聊天宿主也可按实际能力使用此文本模式，但不把它列为本次新增实测。
 
+## ChatGPT补充核验 · 2026-10-31
+
+官方文件上传帮助明确列出TXT，并说明普通文件上传受套餐、工作区设置、地区、客户端和模型影响。普通对话可提供本包skill.txt作为资料，再发送chat/start.txt；这不是安装，也不承诺跨会话永久生效。
+官方Skills帮助将原生技能说明为符合资格的Business、Enterprise、Healthcare、Edu用户等，且受工作区设置与产品可用性影响。存在入口时可按侧栏Plugins→Skills→Create→Upload from your computer上传技能包；需通过平台扫描，不能用本地格式校验代替平台扫描成功。入口不存在时使用TXT，不要求用户升级或开通付费服务。
+原生包沿用单个同名顶层目录、SKILL.md和references，agents/openai.yaml仅为OpenAI宿主元数据。未在用户当前ChatGPT账号上传或扫描，不能标为该账号安装成功。
+
+依据：[ChatGPT文件上传官方帮助](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt)、[ChatGPT技能官方帮助](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)、[技能编写官方文档](https://learn.chatgpt.com/docs/build-skills)。以上均于本次任务真实打开，不以API文档代替网页端可用性。
+
 <<<END-RESOURCE references/platform-compatibility.md>>>
 
 <<<RESOURCE references/prompt-template.md>>>
@@ -551,4 +555,4 @@ examples/public-demo.md为本次原创虚构演示，无真实客户、无平台
 
 <<<END-RESOURCE references/workbook-adaptation.md>>>
 
-<<<SKILL-PACK-END xhs-viral-replica version=2.1.2>>>
+<<<SKILL-PACK-END xhs-viral-replica version=2.1.3>>>
