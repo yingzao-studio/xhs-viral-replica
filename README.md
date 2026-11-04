@@ -1,76 +1,112 @@
-## 豆包、DeepSeek与ChatGPT接入更新（2.1.3）
+# 小红书参考拆解与创作
 
-- ChatGPT原生技能：仅在账号具备Skills上传入口时使用目录包；官方规则已核对，未在你的账号安装或扫描。
-- 普通聊天：使用[完整单文件](skill.txt)，或[启动提示词](chat/start.txt)；先验证模型确实读到所需正文。
-- DeepSeek Harness：同名文件夹的SKILL.md入口与references，按官方的一层目录发现规则放置。
-- 豆包原生技能导入：本次缺少官方格式和客户端实测依据，保留标准包候选，不标为已验证。
-- [逐项官方核验、安装方式与未测范围](references/platform-compatibility.md)。文件存储、聊天参考和原生技能安装是不同能力。
+**给一篇参考笔记，加上你自己的素材，产出标题、正文、封面文案和逐图制作稿。**
+
+适合看到一篇好笔记、想借鉴结构，却不知道怎么写成自己内容的创作者、产品负责人和运营人员。借鉴结构，用自己的事实与表达写新稿。默认只制作草稿。
+
+[看完整示例](examples/public-demo.md) · [开始使用](#开始使用) · [下载最新版技能包](https://github.com/yingzao-studio/xhs-viral-replica/releases/latest)
+
+![从参考笔记和真实素材，到结构拆解与单篇图文方案的流程示意，非实际运行截图](assets/workflow.svg)
+
+## 你会拿到什么
+
+- **单篇草稿：**3个备选标题、推荐标题、正文和标签。
+- **图文制作方案：**封面字、逐图画面与文案、需要补拍或提供的素材。
+- **拆解依据：**参考内容的可见结构、可迁移部分、事实来源和待补信息。
+
+没有亲身体验时，可以写选购核对清单或待实测方案，不会把产品规格写成“我用了一个月”。文字与逐图稿不等于已生成图片，成图需要宿主提供图像工具。
+
+## 先看一个完整示例
+
+[通勤杯演示：参考结构 → 标题、正文与4张逐图稿](examples/public-demo.md)
+
+| 输入 | 拆解与迁移 | 输出片段 |
+| --- | --- | --- |
+| 参考短文：选文件盒前，先量书架可用宽度 | 提取“先量容纳空间，再对照物品尺寸”的顺序 | 标题：选通勤杯前，先量一下你放杯子的地方 |
+| 演示材料：杯架内宽约7厘米，候选杯身最宽处8厘米 | 用新场景和材料重新写，不照搬原文 | 封面字：先量杯架，再选杯 |
+| 没有实际使用记录、没有实物照片 | 写购买前核对事项，标明待补图片 | 完整正文、标签和逐图制作稿见示例 |
+
+**这是虚构材料演示，不是真实测评或客户成绩；尚未成图、未发布，无流量与成交数据。**上方图片仅解释工作流程。
+
+## 开始使用
+
+### 方式一：普通聊天用户
 
 <!-- PUBLIC-ACCESS:START -->
-## 所有人可获取：DeepSeek · 豆包 · ChatGPT
+1. 打开[完整技能文本](通用提示词.txt)，复制全文，或保存为TXT。
+2. 在DeepSeek、豆包、ChatGPT等模型中新建对话，粘贴全文；支持附件时也可上传TXT。
+3. 发送下面的任务说明，附上参考笔记和自己的素材。
 
-**小红书参考拆解与创作**
-
-- [完整技能文本，复制后交给模型](https://raw.githubusercontent.com/yingzao-studio/xhs-viral-replica/main/%E9%80%9A%E7%94%A8%E6%8F%90%E7%A4%BA%E8%AF%8D.txt)
-- [ZIP下载](https://github.com/yingzao-studio/xhs-viral-replica/releases/latest)
-- [三平台使用步骤](三平台使用说明.md)
-
-公开下载不代表官方目录收录；模型能否读附件、联网或自动读取链接取决于实际环境。
+[三平台使用步骤](三平台使用说明.md) · [完整文本直链](https://raw.githubusercontent.com/yingzao-studio/xhs-viral-replica/main/%E9%80%9A%E7%94%A8%E6%8F%90%E7%A4%BA%E8%AF%8D.txt)
 <!-- PUBLIC-ACCESS:END -->
 
-# 小红书参考拆解与创作 · v2.1.3
+### 方式二：支持Skill的工具用户
 
-拆解参考笔记的可见结构，用自己的真实材料创作1篇图文草稿。 不虚构经历和数据，不保证流量或成交。默认只制作草稿。
+1. [下载最新版技能包](https://github.com/yingzao-studio/xhs-viral-replica/releases/latest)，解压并保留完整的`xhs-viral-replica`文件夹。
+2. 按当前工具的技能目录要求安装，新开对话或刷新技能列表，确认可以调用。
+3. 使用下面的指令。不要只复制`SKILL.md`而遗漏`references`。
 
-## 下载与安装
+[详细安装说明](安装与使用.md) · [平台兼容与未测范围](references/platform-compatibility.md)
 
-- [下载v2.1.0技能包](https://github.com/yingzao-studio/xhs-viral-replica/releases/latest)
-- [更新与版本下载](https://github.com/yingzao-studio/xhs-viral-replica/releases/latest)
+### 复制这段，开始第一篇
 
-解压后，将完整的`xhs-viral-replica`文件夹放入当前工具的技能目录。Codex常用目录为`~/.agents/skills`；其他宿主以其配置为准。新开对话或刷新技能列表后调用。不要只复制SKILL.md而遗漏参考文件。
+```text
+使用 xhs-viral-replica，拆解下面的参考，用我的真实素材写1篇小红书图文草稿。
+只借鉴结构，不照搬原文，不虚构体验或互动数据，本次只做草稿。
+缺资料时，最多先问三个关键问题。
 
-## 一句话开始
+参考笔记：[粘贴链接、截图或原文]
+我的主题：[准备写什么]
+我的真实素材：[产品资料、照片、自己的记录等；没有体验就写没有]
+```
 
-> 使用 xhs-viral-replica，拆解我提供的参考，用我的真实素材写1篇图文草稿。缺资料最多先问三个关键问题，不编体验或互动数据，本次只做草稿，不发布。
+只给参考，也可以先拆解；要创作草稿，还需主题和至少一项自己的可核实素材。受众和目标不知道时可留空，先根据资料提出待确认方向。
 
-最少输入、适用人群和默认成果见[技能入口](SKILL.md)。不知道受众和目标可以留空，AI先根据资料提出待确认方向。
+## 能力与适用范围
 
-## 先看交付样子
+技能不自带平台登录、联网、图片模型或发布权限。链接无法读取时，使用你提供的截图或文本；只有标题时只分析标题，不猜正文、封面和互动数据。不保证流量或成交。
 
-- [原创演示：成稿、逐图稿与7天计划](examples/public-demo.md)
-- [调用提示词](references/prompt-template.md)
-- [联用时的共用记录](references/shared-contract.md)
-- [跨环境适配](references/agent-adaptation.md)
-- [安装说明](安装与使用.md) / [更新说明](更新说明.md) / [验证结果](验证结果.md)
+公开下载不代表官方技能目录收录。普通聊天参考、文件存储与原生技能安装是不同能力；能否完整读取附件及执行指令，取决于实际环境。
 
-演示为原创虚构材料，不是真实客户成绩。文字稿不代表已成图，未发布不代表已验证流量。
+- ChatGPT原生技能目录包仅适用于账号具备相应上传入口的情况。
+- DeepSeek Harness目录方式与普通聊天文本方式分别说明，见[平台兼容记录](references/platform-compatibility.md)。
+- 豆包原生技能导入缺少官方格式与客户端实测依据，未标为已验证。
+- 跨环境是适配设计，未声称所有模型或客户端均已实测通过。
 
-## 配合另一个技能
+## 进阶使用
 
-xhs-content-loop负责素材、排期与进度；xhs-viral-replica负责参考拆解与单篇创作。两者可独立使用，联用时共用事实、素材及证据编号，不重复询问已确认信息。
+- [更多调用模板](references/prompt-template.md)：补充产品、素材、篇数与交付要求。
+- [技能入口](SKILL.md)：查看拆解、创作与检查方法。
+- [跨环境适配](references/agent-adaptation.md)：确认工具、路径、输出和恢复方式。
+- [共用记录与交接](references/shared-contract.md)：沿用已确认的素材和事实。
 
-## v2更新
+想把零散素材整理成7天排期，可以配合[xhs-content-loop](https://github.com/yingzao-studio/xhs-content-loop)。本技能负责参考拆解与单篇创作，两者可独立使用。
 
-补充新手入口和缺资料处理，先展示成稿再附分析；移除对私人附件的必需依赖。通用包不含私人原始Excel、第三方原图、账号凭据或历史业务台账。本公开仓库从通用版新建，不包含原私有仓库的历史记录。
+## 版本、验证与许可
 
-## 能力与验证边界
+当前技能版本：**v2.1.3**。[版本记录](CHANGELOG.md) · [更新说明](更新说明.md) · [验证结果](验证结果.md) · [规范核验来源](references/standards-review.md)
 
-技能不自带账号登录、联网、图片模型或发布权限。不支持技能目录的聊天环境可使用[通用提示词](通用提示词.txt)，能力缺失时按说明降级。跨环境属于适配设计，未声称所有国内外模型实测通过。
+基础结构审计与同一助手的四种情形手工试跑，和独立模型效果评测分开报告。尚未完成独立跨模型回归、真实平台发布或增长效果验证。[行为评估用例](evals/README.md)不把手写演示或结构通过算作成功案例。
 
-本轮完成基础结构审计和四种情形的同一助手手工试跑，未完成独立跨模型回归、真实平台发布或增长效果验证。运行`python scripts/validate_package.py`可检查基础结构；它不是模型效果评测。
+使用技能无需安装Python依赖。维护者可运行：
 
+```sh
+python -m pip install -r requirements-dev.txt
+python -X utf8 scripts/validate_package.py
+```
 
-## 标准、维护与许可
+结构检查不等于模型效果评测。GitHub检查状态以实际Actions结果为准。Release中的附件以对应发布版本为准；仓库最新文档可能包含后续改进。
 
-版本2.1.3。采用[MIT许可证](LICENSE)，第三方与历史素材的范围见[许可说明](THIRD_PARTY.md)。[本次官方规范核验](references/standards-review.md)列明来源与快照版本。
-当前OpenAI文档列出的本地目录为~/.agents/skills及项目.agents/skills。旧版本或宿主可能有其他目录，按该工具实际技能列表确认，避免安装同名副本。此电脑已有的发现目录不在此次更新中迁移。
-使用本技能无需安装Python依赖；维护校验才需要：先运行`python -m pip install -r requirements-dev.txt`，再运行`python -X utf8 scripts/validate_package.py`。GitHub检查配置已附带，但只有提交仓库并实际跑完后才可称CI通过。
-[行为评估用例](evals/README.md)独立于文件校验，目前尚未完成独立模型实测。不把手写演示或结构通过称为成功案例。
+采用[MIT许可证](LICENSE)，第三方与历史素材范围见[许可说明](THIRD_PARTY.md)。通用包不含私人原始Excel、第三方原图、账号凭据或历史业务台账，也不包含原私有仓库的历史记录。
 
 ## English quick start
 
-Use the skill with your own source material. It produces a reviewable draft or a beginner's next action, keeps unknown facts explicit, and never assumes account access. Live research requires browsing; image production requires an image tool. Plain chat users can upload the bundled text instructions. Examples are synthetic, not customer results.
+Turn a reference Xiaohongshu / RED note and your own source material into a reviewable draft: three title options, body text, tags, cover copy and a per-image production plan. Learn from structure without copying wording or inventing personal experience.
 
-## 使用反馈
+For plain chat, paste or upload [the complete instructions](skill.txt). For skill-enabled tools, download the [latest package](https://github.com/yingzao-studio/xhs-viral-replica/releases/latest) and follow your host's installation instructions. Browsing and image generation require host tools. The public example is synthetic, not a customer result; cross-platform behavior has not been independently verified.
 
-反馈时提供：使用的模型与工具、去敏后的最小输入、预期结果、实际结果及失败阶段。不要提交证件、凭据、买家信息或无权公开的截图。优先修复能复现的失败，再增加新功能；不以功能数量代替实用性。
+## 使用反馈与支持
+
+试用遇到问题，欢迎[提交Issue](https://github.com/yingzao-studio/xhs-viral-replica/issues)，提供模型与工具、去敏后的最小输入、预期结果、实际结果及失败阶段。不要提交证件、凭据、买家信息或无权公开的截图。
+
+如果这套流程对你有用，欢迎 **Star收藏**，方便下次找到；也欢迎提交可公开复现的改进案例。

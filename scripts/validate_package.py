@@ -1,6 +1,7 @@
 """Maintenance checks; requires PyYAML, not needed for using the skill."""
 from pathlib import Path
 import re,json,sys
+import xml.etree.ElementTree as ET
 import yaml
 root=Path(__file__).resolve().parents[1]
 body=(root/'SKILL.md').read_text(encoding='utf-8')
@@ -15,7 +16,7 @@ assert all(isinstance(k,str) and isinstance(v,str) for k,v in meta['metadata'].i
 links=0
 for f in root.rglob('*'):
  if not f.is_file() or '.git' in f.relative_to(root).parts:continue
- assert f.suffix in {'.md','.txt','.json','.yaml','.yml','.py','.csv'} or f.name in {'LICENSE','.gitignore'},f
+ assert f.suffix in {'.md','.txt','.json','.yaml','.yml','.py','.csv','.svg'} or f.name in {'LICENSE','.gitignore'},f
  text=f.read_text(encoding='utf-8-sig')
  if f.suffix!='.py': assert not re.search(r'(?<![A-Za-z])[A-Za-z]:[\\/]|/Users/|/home/|18142',text),f
  if f.suffix=='.md':
@@ -25,6 +26,11 @@ for f in root.rglob('*'):
    assert target.is_relative_to(root.resolve()) and target.is_file(),(f,link)
    links+=1
  if f.suffix=='.json':json.loads(text)
+ if f.suffix=='.svg':
+  svg=ET.fromstring(text)
+  assert svg.tag=='{http://www.w3.org/2000/svg}svg',f
+  assert not any(e.tag.rsplit('}',1)[-1] in {'script','foreignObject'} for e in svg.iter()),f
+  assert not any(k.lower().startswith('on') or k.rsplit('}',1)[-1]=='href' for e in svg.iter() for k in e.attrib),f
 cases=json.loads((root/'evals/cases.json').read_text(encoding='utf-8'))
 assert len(cases)>=5 and len({c['id'] for c in cases})==len(cases)
 assert all(c['execution_status']=='not_run' for c in cases)
